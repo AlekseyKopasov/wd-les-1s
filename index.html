@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <title>Лекция 1: Введение</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .shower {
+        --slide-ratio: calc(16 / 9);
+      }
+    </style>
+  </head>
+
+  <body class="shower full">
+
+    <header class="caption">
+      <h1>Веб-разработка</h1>
+      <p>Лекция 1: Введение</p>
+    </header>
+
+    <section class="slide">
+      <h2 class="shout shrink">Лекция 1: Введение</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Рассмотрим:</h2>
+      <ol>
+        <li>этапы проектирования интерфейсов</li>
+        <li>стандарты и спецификации, существующими в веб-разработке</li>
+        <li>шрифты (веб-шрифты)</li>
+        <li>цветовые пространства и их особенности в вебе</li>
+        <li>ошибки в макетах под верстку</li>
+        <li>UI/UX</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Рассмотрим:</h2>
+      <ol>
+        <li>Веб-аналитика</li>
+        <li>Оптимизация сайта</li>
+        <li>SEO</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Научимся:</h2>
+      <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Хорошим правилам построения интерфейса</li>
+        <li>Сверстаем небольшой статический веб-сайт и развернем его на хостинге</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Улучшим:</h2>
+      <ol>
+        <li>Показатели веб-аналитики</li>
+        <li>СЕО</li>
+        <li>Доступность (a11y)</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Макеты:</h2>
+      <ul>
+        <li><a
+            href="https://www.figma.com/design/GgvsGk9qkxW4MtEGVo7qoM/sziu_web_course?node-id=1-184&node-type=canvas&t=nj5PnMFdvbvaAVs9-0"
+            target="_blank">Окрыть в Figma</a></li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Системные требования</h2>
+      <div class="columns two">
+        <div>
+          <h4 style="margin-bottom: 5px;">Операционная система</h4>
+          <ul>
+            <li>Windows 10 x64 и новее</li>
+            <li>Mac OS 11 Big Sur и новее</li>
+            <li>Ubuntu 20.04 и новее</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="margin-bottom: 5px;">Браузер</h4>
+          <ul>
+            <li>Браузер, основанный на Blink: <mark>Chrome</mark>, Яндекс.Браузер, Opera, Edge — последняя версия</li>
+            <li><mark>Mozilla Firefox</mark> последняя версия</li>
+            <li>Apple Safari 15.2 и новее</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Не пользоваться:</h2>
+      <ul>
+        <li>иными браузерами</li>
+        <li>браузерами более поздних версий</li>
+        <li>мобильными браузерами</li>
+      </ul>
+      <h2>Причина:</h2>
+      <p>в различных версиях браузерных движков могут отличаться цвета, шрифты и поддержка веб-технологий</p>
+    </section>
+
+    <section class="slide">
+      <h2>ПО</h2>
+      <div class="columns two">
+        <ol>
+          <li><a href="https://git-scm.com/downloads" target="_blank"><b>Git</b></a></li>
+          <li><a href="https://desktop.github.com/" target="_blank"><b>GitHub desktop (для windows)</b></a></li>
+          <li><a href="https://code.visualstudio.com/download" target="_blank"><b>VS Code</b></a></li>
+          <li><a href="https://www.google.com/intl/ru_ru/chrome/" target="_blank"><b>Google Chrome</b></a></li>
+        </ol>
+        <figure>
+          <img src="img/po.png" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        </figure>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>ПО</h2>
+      <div class="columns two">
+        <ol>
+          <li><a href="https://www.figma.com" target="_blank"><b>Figma (web)</b></a></li>
+          <li><a href="https://www.figma.com/downloads/" target="_blank"><b>Figma (desktop)</b></a></li>
+          <li><a href="https://apps.microsoft.com/detail/9n0dx20hk701?rtc=1&hl=ru-ru&gl=RU" target="_blank"><b>Terminal
+                для windows</b></a></li>
+          <li><a href="https://github.com/" target="_blank"><b>GitHub</b></a></li>
+        </ol>
+        <figure>
+          <img src="img/po.png" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        </figure>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Регламент</h2>
+      <ul>
+        <li>2-4 академических часа – лекция</li>
+        <li>6-8 часов на самостоятельную домашнюю работу</li>
+        <li>В течение всего модуля будет доступен ученический чат</li>
+        <li>По окончанию лекций в чат будет выкладываться ссылка на материалы к лекции</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Регламент</h2>
+      <ul>
+        <li>Демонстрация выполненной домашней работы будет осуществляться посредством сервиса GitHub. Ссылки на
+          выполненную домашнюю работу отправлять по адресу <mark>portal-spb@ranepa.ru</mark> с указанием темы письма – например:  <mark>ДЗ_4</mark></li>
+        <li>Выполнение аттестационного учебного проекта</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Тим Бернерс-Ли</h2>
+      <div class="columns two">
+        <img src="img/lee.jpg" alt="Тим Бернерс-Ли">
+        <ol>
+          <li>HTTP</li>
+          <li>URI/URL</li>
+          <li>HTML</li>
+          <li>httpd</li>
+          <li>WorldWideWeb</li>
+          <li>Интернет</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Первый веб-сайт</h2>
+      <p><a href="http://info.cern.ch/" target="_blank">http://info.cern.ch/</a></p>
+    </section>
+
+    <section class="slide">
+      <h2>Как устроен интернет</h2>
+      <p><b>Интернет</b> — это глобальная сеть, которая объединяет устройства по всему миру и дает пользователям множество возможностей: работать, учиться, вести бизнес и так далее. В наши дни от работоспособности интернета зависят буквально все процессы жизнедеятельности</p>
+    </section>
+
+    <section class="slide">
+      <h2>Кто &laquo;придумал&raquo; интернет</h2>
+      <div class="columns two">
+        <figure>
+          <img src="img/Леонард_Клейнрок_(Фото_Getty_Images).webp" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        </figure>
+        <p>Ученый <b>Леонард Клейнрок</b> в&nbsp;1960-х создал математическую теорию коммутации пакетов, которая лежит в&nbsp;основе технологии интернета</p>
+      </div>
+    </section>
+    <section class="slide">
+      <h2>Кто &laquo;придумал&raquo; интернет</h2>
+      <div class="columns two">
+        <figure>
+          <img src="img/licklider.jpg" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        </figure>
+        <p>В&nbsp;1962 году ученый <b>Джозеф Ликлайдер</b> опубликовал работу &laquo;Галактическая сеть&raquo;, где впервые предложил концепцию работы компьютерной сети</p>
+      </div>
+    </section>
+    <section class="slide">
+      <h2>Кто &laquo;придумал&raquo; интернет</h2>
+      <p>В&nbsp;начале 1970-х ученые и&nbsp;изобретатели <b>Винтон Серф</b> и&nbsp;<b>Роберт Кан</b> разработали протоколы TCP (Transmission Control Protocol) и&nbsp;IP (Internet Protocol).</p>
+      <div class="columns two">
+        <figure>
+          <img src="img/vint_cerf.jpg" width="100%" height="100%" alt="" style="
+          max-height: 200px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        <cite class="small"><a href="https://ru.ruwiki.ru/wiki/%D0%A1%D0%B5%D1%80%D1%84,_%D0%92%D0%B8%D0%BD%D1%82%D0%BE%D0%BD#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Vint_Cerf_-_2010.jpg" target="_blank">ruwiki</a></cite>
+        </figure>
+        <figure>
+          <img src="img/kahn.jpg" width="100%" height="100%" alt="" style="
+          max-height: 200px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        <cite class="small"><a href="https://commons.wikimedia.org/wiki/File:Bob_Kahn.jpg?uselang=ru" target="_blank">wikimedia.org</a></cite>
+        </figure>
+      </div>
+    </section>
+    <section class="slide">
+      <h2>Кто &laquo;придумал&raquo; интернет</h2>
+      <p>Разработчики <b>Тим Бернерс Ли</b>&nbsp;и&nbsp;<b>Роберт Кайо</b> в&nbsp;1989 году предложили концепцию Всемирной паутины (World Wide Web), которая стала фундаментом для современного интернета</p>
+      <div class="columns two">
+        <figure>
+          <img src="img/lee.jpg" width="100%" height="100%" alt="" style="
+          max-height: 200px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        </figure>
+        <figure>
+          <img src="img/cailliau.jpg" width="100%" height="100%" alt="" style="
+          max-height: 200px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        <cite class="small"><a href="https://ru.ruwiki.ru/wiki/%D0%9A%D0%B0%D0%B9%D0%BE,_%D0%A0%D0%BE%D0%B1%D0%B5%D1%80%D1%82#HeGWaHR0cCUzQSUyRiUyRnJvYmVydC5jYWlsbGlhdS5mcmVlLmZyJTJGQnlMZXR0ZXIlMkZNJTJGTWUlMkZQaG90b3MlMkZMYXJnZSUyRk9uRGVzay5qcGVn" target="_blank">Photo en:CERN</a></cite>
+        </figure>
+      </div>
+    </section>
+
+    <section class="slide clear">
+      <h2>WWW</h2>
+      <p>
+        <blockquote>30 апреля 1993 года ЦЕРН передал программное обеспечение <b>World Wide Web</b> в общественное достояние</blockquote>
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Интернет в Росии</h2>
+      <ul>
+        <li><b>7 апреля 1994 г</b> — в нашей стране был зарегистрирован первый домен</li>
+        <li><b>28 августа 1990 г</b> — в этот день ученые на компьютере в Институте атомной энергии имени И.В. Курчатова связались с учеными из университета Хельсинки с помощью модема, чтобы регулярно передавать почту по интернету</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Из чего состоит интернет</h2>
+      <div class="columns two">
+        <ol>
+          <li>кабели</li>
+          <li>маршрутизаторы</li>
+          <li>сети</li>
+        </ol>
+        <figure>
+          <img src="img/internet.png" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        </figure>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Кабели</h2>
+      <figure>
+        <img src="img/cabels.png" width="100%" height="100%" alt="" style="
+        max-height: 370px;
+        margin: 0 auto;
+        display: flex;
+        object-fit: contain;
+      ">
+        <cite class="small" ><a href="https://submarine-cable-map-2019.telegeography.com/" target="_blank">telegeography.com</a></cite>
+      </figure>
+    </section>
+
+    <section class="slide">
+      <h2>Маршрутизаторы</h2>
+      <figure>
+        <img src="img/routs.png" width="100%" height="100%" alt="" style="
+        max-height: 370px;
+        margin: 0 auto;
+        display: flex;
+        object-fit: contain;
+      ">
+        <cite class="small" ><a href="https://www.factorgroup.ru/collection/rex" target="_blank">factorgroup.ru</a></cite>
+      </figure>
+    </section>
+
+    <section class="slide">
+      <h2>Маршрутизаторы</h2>
+      <figure>
+        <img src="img/trafics.png" width="100%" height="100%" alt="" style="
+        max-height: 370px;
+        margin: 0 auto;
+        display: flex;
+        object-fit: contain;
+      ">
+        <cite class="small" >Фото: Khan Academy</cite>
+      </figure>
+    </section>
+
+    <section class="slide">
+      <h2>Кто управляет интернетом</h2>
+
+      <ul>
+        <li>Совет по архитектуре интернета (IAB)</li>
+        <li>Интернет-корпорация по присвоению имен и номеров (ICANN)</li>
+        <li>Международный союз электросвязи (МСЭ)</li>
+        <li>Internet Society (ISOC)</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Интернет</h2>
+      <div class="columns two">
+        <ul>
+          <li>Поиск информации</li>
+        </ul>
+        <figure>
+          <img src="img/internet.png" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        </figure>
+      </div>
+    </section>
+    <section class="slide">
+      <h2>Интернет</h2>
+      <div class="columns two">
+        <ul>
+          <li>Поиск информации</li>
+          <li>Общение</li>
+        </ul>
+        <figure>
+          <img src="img/internet.png" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        </figure>
+      </div>
+    </section>
+    <section class="slide">
+      <h2>Интернет</h2>
+      <div class="columns two">
+        <ul>
+          <li>Поиск информации</li>
+          <li>Общение</li>
+          <li>Обучение</li>
+        </ul>
+        <figure>
+          <img src="img/internet.png" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        </figure>
+      </div>
+    </section>
+    <section class="slide">
+      <h2>Интернет</h2>
+      <div class="columns two">
+        <ul>
+          <li>Поиск информации</li>
+          <li>Общение</li>
+          <li>Обучение</li>
+          <li>Интернет-торговля</li>
+        </ul>
+        <figure>
+          <img src="img/internet.png" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        </figure>
+      </div>
+    </section>
+    <section class="slide">
+      <h2>Интернет</h2>
+      <div class="columns two">
+        <ul>
+          <li>Поиск информации</li>
+          <li>Общение</li>
+          <li>Обучение</li>
+          <li>Интернет-торговля</li>
+          <li>Развлечение</li>
+        </ul>
+        <figure>
+          <img src="img/internet.png" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        </figure>
+      </div>
+    </section>
+    <section class="slide">
+      <h2>Интернет</h2>
+      <div class="columns two">
+        <ul>
+          <li>Поиск информации</li>
+          <li>Общение</li>
+          <li>Обучение</li>
+          <li>Интернет-торговля</li>
+          <li>Развлечение</li>
+          <li>Преступление</li>
+        </ul>
+        <figure>
+          <img src="img/internet.png" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        </figure>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>&laquo;Контракт для Интернета&raquo;</h2>
+      <p><a href="https://contractfortheweb.org/" target="_blank">https://contractfortheweb.org/</a></p>
+    </section>
+
+    <section class="slide">
+      <h2>Открытое письмо Тимоти Джона Бернерса-Ли</h2>
+      <p><a href="https://webfoundation.org/2024/03/marking-the-webs-35th-birthday-an-open-letter/" target="_blank">webfoundation.org</a></p>
+    </section>
+
+    <section class="slide">
+      <h2>Программы для работы в вебе</h2>
+      <ol>
+        <li>Браузеры</li>
+        <li>Приложения (мини-браузеры PWA). PWA похожи на нативные приложения. Сердце PWA — Service Worker. Service
+          Worker представляет собой javascript </li>файл, подключаемый в html коде страницы. В нем разработчик
+        определяет логику работы с приходящими из фронтэнда запросами и другую функциональность
+        <li>Модули и компоненты в ПО</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>NCSA Mosaic Browser</h2>
+      <figure>
+        <img src="img/mosaic.png" width="100%" height="100%" alt="" style="
+        max-height: 370px;
+        margin: 0 auto;
+        display: flex;
+        object-fit: contain;
+      ">
+        <cite class="small" ><a href="https://en.wikipedia.org/wiki/NCSA_Mosaic" target="_blank">wikipedia.org</a></cite>
+      </figure>
+    </section>
+
+    <section class="slide clear">
+      <img src="img/b-war.png" width="100%">
+    </section>
+
+    <section class="slide">
+      <h2>Первая война (1995—1999)</h2>
+      <figure>
+        <img src="img/ie4.png" width="100%" height="100%" alt="" style="
+        max-height: 370px;
+        margin: 0 auto;
+        display: flex;
+        object-fit: contain;
+      ">
+        <cite class="small" ><a href="https://ru.wikipedia.org/wiki/Internet_Explorer_4" target="_blank">wikipedia.org</a></cite>
+      </figure>
+    </section>
+
+    <section class="slide">
+      <h2>Гегемония Microsoft (2000—2004)</h2>
+      <figure>
+        <img src="img/ie6.png" width="100%" height="100%" alt="" style="
+        max-height: 370px;
+        margin: 0 auto;
+        display: flex;
+        object-fit: contain;
+      ">
+        <cite class="small" ><a href="https://www.historyofinformation.com/image.php?id=6187" target="_blank">historyofinformation.com</a></cite>
+      </figure>
+    </section>
+
+    <section class="slide">
+      <h2>Вторая война (2005—2015)</h2>
+      <div class="columns three">
+        <img src="img/chrome.png" width="100%" height="100%" alt="" style="
+        max-height: 370px;
+        margin: 0 auto;
+        display: flex;
+        object-fit: contain;
+      ">
+        <img src="img/opera.png" width="100%" height="100%" alt="" style="
+        max-height: 370px;
+        margin: 0 auto;
+        display: flex;
+        object-fit: contain;
+      ">
+        <img src="img/mozilla.png" width="100%" height="100%" alt="" style="
+        max-height: 370px;
+        margin: 0 auto;
+        display: flex;
+        object-fit: contain;
+      ">
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Доминирование Google Chrome (2016—настоящее время)</h2>
+      <img src="img/chrome.png" width="100%" height="100%" alt="" style="
+      max-height: 320px;
+      margin: 0 auto;
+      display: flex;
+      object-fit: contain;
+    ">
+    </section>
+
+    <section class="slide">
+      <h2>В России</h2>
+      <figure>
+        <img src="img/b-stat.png" width="100%" height="100%" alt="" style="
+        max-height: 370px;
+        margin: 0 auto;
+        display: flex;
+        object-fit: contain;
+      ">
+        <cite class="small" ><a href="https://gs.statcounter.com/browser-market-share/all/russian-federation" target="_blank">statcounter.com</a></cite>
+      </figure>
+    </section>
+
+    <section class="slide">
+      <h2>Браузерный движок</h2>
+      <p>Программа, преобразующая содержимое веб-страниц в интерактивное изображение на экране</p>
+      <div class="columns two">
+        <ul>
+          <li>Blink</li>
+          <li>WebKit</li>
+          <li>Gecko</li>
+        </ul>
+        <ul>
+          <li>Trident</li>
+          <li>EdgeHTML</li>
+          <li>Chromium</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Браузерный движок</h2>
+      <ul>
+        <li><b>Blink</b> — движок, который используется браузерами Google Chrome, Microsoft Edge, Opera, Яндекс Браузер
+          и другими. Он является ответвлением от WebKit и поддерживает множество современных веб-стандартов и технологий
+        </li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Браузерный движок</h2>
+      <ul>
+        <li><b>WebKit</b> — движок, который используется браузером Safari и другими браузерами на основе Chromium. Он
+          был разработан на основе KHTML и также поддерживает множество современных веб-стандартов и технологий</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Браузерный движок</h2>
+      <ul>
+        <li><b>Gecko</b> — движок, который используется браузером Firefox и другими продуктами Mozilla. Он был
+          разработан с нуля и имеет свою собственную реализацию веб-стандартов и технологий</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Браузерный движок</h2>
+      <ul>
+        <li><b>Trident</b> — движок, который использовался браузером Internet Explorer до версии 11. Он был
+          проприетарным и не полностью соответствовал веб-стандартам, что вызывало проблемы с совместимостью и
+          безопасностью</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Браузерный движок</h2>
+      <ul>
+        <li><b>EdgeHTML</b> — движок, который использовался браузером Microsoft Edge до версии 79. Он был ответвлением
+          от Trident и имел улучшенную поддержку веб-стандартов и технологий</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Браузерный движок</h2>
+      <ul>
+        <li><b>Chromium</b> — движок, который используется браузерами Microsoft Edge, Brave, Vivaldi</li>
+      </ul>
+    </section>
+
+    <section class="slide clear center">
+      <p><blockquote>Наличие собственных функций, концептуальные различия в работе, скорость и политика внедрений стандартов и
+        спецификаций, являются основной проблемой реализации кроссбраузерного отображения веб-сайта</blockquote></p>
+    </section>
+
+    <section class="slide">
+      <h2>Как работает веб</h2>
+      <figure>
+        <img src="img/сlient-server.png" width="100%" height="100%" alt="" style="
+        max-height: 370px;
+        margin: 0 auto;
+        display: flex;
+        object-fit: contain;
+      ">
+      </figure>
+    </section>
+
+    <section class="slide">
+      <h2>Немного терминов</h2>
+      <ul>
+        <li><b>Клиент</b> — приложение, которое запущено на компьютере и подключено к Интернету</li>
+        <li><b>Сервер</b> — компьютер, который подключен к Интернету</li>
+        <li><b>IP-адрес</b> — числовой идентификатор устройства в сети TCP/IP</li>
+        <li><b>Интернет-провайдер</b> — посредник между клиентом и серверами</li>
+        <li><b>DNS</b> — распределенная база данных, которая хранит соответствие доменных имен компьютеров и их IP-адресов в Интернете</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Немного терминов</h2>
+      <ul>
+        <li><b>Имя домена</b> — используется для идентификации одного или нескольких IP-адресов (например, www.github.com)</li>
+        <li><b>TCP/IP</b> — наиболее широко используемый протокол связи</li>
+        <li><b>Номер порта</b> — число, которое идентифицирует определенный порт на сервере и всегда связано с IP-адресом</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Немного терминов</h2>
+      <ul>
+        <li><b>Хост</b> — это может быть клиент, сервер или любой другой тип устройства</li>
+        <li><b>HTTP</b> — протокол передачи гипертекста</li>
+        <li><b>URL</b> — URL-адреса идентифицируют конкретный веб-ресурс (например, https://github.com/someone)</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>DNS</h2>
+      <figure>
+        <img src="img/DNS.jpg" width="100%" height="100%" alt="" style="
+        max-height: 370px;
+        margin: 0 auto;
+        display: flex;
+        object-fit: contain;
+      ">
+        <cite class="small" ><a href="https://ru.hostings.info/schools/dns.html" target="_blank">hostings.info</a></cite>
+      </figure>
+    </section>
+
+    <section class="slide">
+      <h2>DOM</h2>
+      <figure>
+        <img src="img/DOM.png" width="100%" height="100%" alt="" style="
+        max-height: 370px;
+        margin: 0 auto;
+        display: flex;
+        object-fit: contain;
+      ">
+        <cite class="small" ><a href="https://www.w3.org/TR/REC-DOM-Level-1/introduction.html" target="_blank">w3.org</a></cite>
+      </figure>
+    </section>
+
+    <section class="slide">
+      <h2>Что такое HTTP</h2>
+      <p><b>HTTP</b> (HyperText Transfer Protocol) — &nbsp;представляет собой список правил, по&nbsp;которым компьютеры обмениваются данными в&nbsp;интернете</p>
+      <ol>
+        <li>вписываем URL в браузер</li>
+        <li>браузер находит IP-адрес</li>
+        <li>браузер отправляет HTTP-запрос</li>
+        <li>сервер отдаёт HTTP-ответ</li>
+        <li>браузер отображает веб-страницу</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>HTTP</h2>
+      <div class="columns two">
+        <div style="
+          display: flex;
+          flex-direction: column;
+        ">
+          <h3 style="
+            margin: 0;
+          ">http запрос</h3>
+          <figure style="
+            height: 100%;
+            flex-shrink: 0;
+          ">
+            <img src="img/http-get.png" width="100%" height="100%" alt="" style="
+            max-height: 100px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            object-fit: cover;
+          ">
+          </figure>
+        </div>
+       <div style="
+        display: flex;
+        flex-direction: column;
+       ">
+        <h3 style="
+          margin: 0;
+        ">http ответ</h3>
+        <figure style="
+          height: 100%;
+          flex-shrink: 0;
+        ">
+          <img src="img/http-res.png" width="100%" height="100%" alt="" style="
+          max-height: 250px;
+          height: 100%;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contein;
+        ">
+        </figure>
+      </div>
+      <cite class="small" ><a href="https://selectel.ru/blog/http-request/" target="_blank">selectel.ru</a></cite>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Какие бывают сайты</h2>
+      <p>По оптимизированности веб-сайта для разных цифровых устройств:</p>
+      <ul>
+        <li>Статические</li>
+        <li>Жидкие (подвижные)</li>
+        <li>Адаптивные</li>
+        <li>Отзывчивые</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Какие бывают сайты</h2>
+      <p>По способу формирования и обновляемости контента:</p>
+      <ul>
+        <li>Статические</li>
+        <li>Динамические</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Какие бывают сайты</h2>
+      <p>По типу контента:</p>
+      <div class="columns two">
+        <ul>
+          <li>блоги</li>
+          <li>корпоративные сайты</li>
+          <li>краудфандинговые платформы</li>
+          <li>сайты электронной коммерции</li>
+        </ul>
+        <ul>
+          <li>образовательные ресурсы</li>
+          <li>новостные сайты</li>
+          <li>социальные медиа</li>
+          <li>сайты ТВ или потокового видео</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Какие бывают сайты</h2>
+      <p>По типу подхода к разработке:</p>
+      <ul>
+        <li><b>MPA</b></li>
+        <li><b>SPA</b> (Gmail, Google Maps, GitHub)</li>
+        <li><b>PWA</b> (Google Docs)</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Технологии</h2>
+      <ul>
+        <li><b>Языки программирования</b>: php, JavaScript, Python</li>
+        <li><b>Верстка</b>: html, css</li>
+        <li><b>Базы данных</b>: mySql, postress, modgoDb </li>
+        <li><b>Фреймворки и библиотеки</b>: asp.net, react.js, vue.js, jquery</li>
+        <li><b>CMS</b>: 1c-bitrix, modx, drupal</li>
+        <li><b>Собственные CMS и CRM</b></li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>No-code</h2>
+      <p>No-code — это метод создания приложений, сайтов с помощью конструкторов или сервисов без использования кода.
+      </p>
+    </section>
+    <section class="slide">
+      <h2>No-code</h2>
+      <p>No-code — это метод создания приложений, сайтов с помощью конструкторов или сервисов без использования кода.
+      </p>
+      <ul>
+        <li>Tilda - <a href="https://tilda.cc/ru/" target="_blank">https://tilda.cc/ru/</a></li>
+        <li>Wix * - <a href="https://ru.wix.com/" target="_blank">https://ru.wix.com/</a></li>
+      </ul>
+
+      <p><cite>* - объявил об уходе из России и отключении всех русских аккаунтов с 12 сентября 2024</cite></p>
+    </section>
+
+    <section class="slide">
+      <h2>Прототипирование</h2>
+      <p><b>Прототипирование</b> — это процесс создания модели будущего сайта, которая позволяет протестировать функциональность и дизайн до того, как он будет реализован полностью</p>
+      <div class="columns two">
+        <ul>
+          <li>Проверка гипотез</li>
+          <li>Экономия времени и денег</li>
+          <li>Тестирование функциональности</li>
+        </ul>
+        <ul>
+          <li>Уточнение идей и концепций</li>
+          <li>Проверка бюджета проекта</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Сервисы для создания прототипов сайта</h2>
+      <div class="columns two">
+        <ul>
+          <li>Figma</li>
+          <li>Axure RP</li>
+          <li>Sketch</li>
+          <li>InVision</li>
+          <li>Moqups</li>
+        </ul>
+        <ul>
+          <li>NinjaMock</li>
+          <li>Wireframe.cc</li>
+          <li>Webflow</li>
+          <li>UXPin</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Верстальщик</h2>
+      <p>это специалист, который выполняет верстку или преобразование дизайн-макета сайта в веб-форму. Он обеспечивает
+        правильное отображение страниц в браузере, упорядочивает код так, чтобы пользователю было наиболее комфортно
+        пользоваться сайтом.</p>
+    </section>
+
+    <section class="slide">
+      <h2>Верстальщик</h2>
+      <ol>
+        <li>Верстальщик получает от дизайнера макет</li>
+        <li>Пишет код на HTML и CSS, чтобы страница в браузере отображалась точно так же, как на макете</li>
+        <li>Этот код верстальщик отправляет разработчикам, чтобы его добавили на сайт / добавляет сам</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Техничечкие навыки верстальщика</h2>
+      <div class="columns two">
+        <ul>
+          <li>HTML и CSS</li>
+          <li>Интерфейс среды для работы</li>
+          <li>Адаптивная вёрстка</li>
+          <li>Основы дизайна</li>
+          <li>Работа с препроцессорами</li>
+          <li>CMS и конструкторы</li>
+          <li>JavaScript</li>
+        </ul>
+        <figure>
+          <img src="img/tech-skills.jpg" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        </figure>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Soft skills для верстальщика</h2>
+      <div class="columns two">
+        <ul>
+          <li>Умение общаться с коллегами</li>
+          <li>Управление временем</li>
+          <li>Английский язык</li>
+          <li>Эмпатия</li>
+        </ul>
+        <figure>
+          <img src="img/soft-skills.jpg" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        </figure>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Плюсы и минусы профессии верстальщика</h2>
+      <div class="columns two">
+        <div>
+          <h3 style="margin: 0; font-size: 38px;"><mark>+</mark></h3>
+          <ul>
+            <li>Низкий порог входа</li>
+            <li>Не нужно глубоко погружаться в программирование</li>
+            <li>Перспективы для карьерного роста</li>
+          </ul>
+        </div>
+       <div>
+        <h3 style="margin: 0; font-size: 38px;"><mark>-</mark></h3>
+        <ul>
+          <li>Относительно невысокие зарплаты на старте</li>
+          <li>Однообразие задач</li>
+          <li>Частые изменения в сфере</li>
+        </ul>
+       </div>
+      </div>
+    </section>
+
+
+    <section class="slide">
+      <h2>Спецификации</h2>
+      <p><mark>Спецификация</mark> — это совокупность всех правил языка программирования, собранных в единый документ.
+      </p>
+      <ol>
+        <li><a href="https://html.spec.whatwg.org/multipage/" target="_blank">HTML Living Standard</a></li>
+        <li><a href="https://www.w3.org/TR/?tag=css" target="_blank">Все спецификации по CSS</a></li>
+        <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/"
+            target="_blank">ECMA-262</a></li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Доступность (a11y)</h2>
+      <p><mark>Доступность</mark> — это процесс создания среды, продуктов и услуг, которыми могут пользоваться люди с
+        инвалидностью. Иногда доступность определяют как степень, с которой что-то доступно для человека.</p>
+    </section>
+
+    <section class="slide">
+      <h2>Веб-доступность</h2>
+      <p><mark>Веб-доступность (web accessibility)</mark> — создание сайтов, веб-приложений и связанных с вебом
+        инструментов, и технологий, которыми могут пользоваться люди с инвалидностью</p>
+    </section>
+
+    <section class="slide">
+      <h2>Зачем заниматься веб-доступностью</h2>
+      <p>Веб-доступность важна по нескольким причинам:</p>
+      <ol>
+        <li>Правовая</li>
+        <li>Репутационная</li>
+        <li>Этическая</li>
+        <li>Расширение охвата пользователей</li>
+        <li>Материальная</li>
+        <li>Инновационная</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Компоненты веб-доступности</h2>
+      <ol>
+        <li>User agents</li>
+        <li>Вспомогательные технологии</li>
+        <li>Веб-контент</li>
+        <li>Инструменты разработки</li>
+        <li>Люди</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Принципы веб-доступности</h2>
+      <ol>
+        <li>Воспринимаемость (Perceivable)</li>
+        <li>Управляемость (Operable) </li>
+        <li>Понятность (Understandable) </li>
+        <li>Устойчивость (Robust)</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Пользователи веб-доступности</h2>
+      <p>Веб-доступность концентрируется на пользователях со следующими особенностями:</p>
+      <div class="columns two">
+        <ul>
+          <li>физическими или моторными</li>
+          <li>неврологическими</li>
+          <li>когнитивными</li>
+        </ul>
+        <ul>
+          <li>визуальными или зрительными</li>
+          <li>аудиальными</li>
+          <li>речевыми</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Спецификации и стандарты</h2>
+      <p>Стандартизацией веб-доступности занимается <mark>W3C</mark> и отдельная рабочая группа <mark>W3C WAI</mark>
+        (W3C Web Accessibility Initiative — Инициатива по веб-доступности W3C)</p>
+
+      <ol>
+        <li>технические спецификации и стандарты</li>
+        <li>руководства и рекомендации</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Руководства и рекомендации</h2>
+      <ol>
+        <li><b>WCAG</b> — руководства по доступности веб-контента</li>
+        <li><b>ATAG</b> (Authoring Tool Accessibility Guidelines, Руководства по доступности средств разработки) — рекомендации
+          по созданию доступных инструментов для разработки</li>
+        <li><b>UAAG</b> (User Agent Accessibility Guidelines, Руководства по доступности User agent) — рекомендации для тех,
+          кто занимается браузерами и похожими технологиями</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Инструменты разработчиков</h2>
+      <ul>
+        <li><b>HTML, CSS, SVG, JavaScript</b> и другие языки, и технологии, особенно важна семантическая вёрстка</li>
+        <li><b>ARIA</b>-разметка, когда не хватает возможностей HTML</li>
+        <li>Библиотеки с доступными компонентами</li>
+        <li>Автоматические тесты — свои тесты или библиотеки для тестирования</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Инструменты разработчиков</h2>
+      <ul>
+        <li>Валидаторы кода</li>
+        <li>Браузерные расширения и инструменты разработчиков, букмарклеты, веб-сервисы</li>
+        <li>Ручное тестирование со вспомогательными технологиями и пользователями</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Инструменты дизайнеров</h2>
+      <ul>
+        <li>Плагины для графических редакторов — проверка контраста, добавление подписей к элементам и пр.</li>
+        <li>Сервисы — генераторы палитр цветов, визуализация порядка фокуса и т. д.</li>
+        <li>Браузерные расширения — расчёт уровня контраста, имитация цветовой слепоты и др.</li>
+        <li>Готовые доступные дизайн-системы и библиотеки компонентов</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Инструменты дизайнеров</h2>
+      <ul>
+        <li>UX-дизайн и исследования — юзабилити-тестирование, метод персон, интервью и т. п.</li>
+        <li>Инструменты создателей контента</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Инструменты дизайнеров</h2>
+      <ul>
+        <li>Текстовые редакторы и веб-сервисы с проверкой орфографии, грамматики и сложности предложений.</li>
+        <li>Программы и сервисы для создания субтитров.</li>
+        <li>Программы для проверки вспышек и миганий в видео и анимации.</li>
+        <li>Плагины в графических редакторах — проверка уровня контраста, имитация цветовой слепоты и пр.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Законодательные требования</h2>
+      <h3 style="margin: 0;">В Европе есть несколько важных документов о веб-доступности:</h3>
+      <ol>
+        <li>Директива о веб-доступности</li>
+        <li>Европейский закон о доступности</li>
+        <li>Европейский стандарт EN 301 549</li>
+        <li>На их основе принимаются все национальные законы о доступности в странах Евросоюза</li>
+      </ol>
+    </section>
+    <section class="slide">
+      <h2>Законодательные требования</h2>
+      <h3 style="margin: 0;">В США:</h3>
+      <ol>
+        <li>Раздел 508</li>
+        <li>ADA</li>
+      </ol>
+    </section>
+    <section class="slide">
+      <h2>Законодательные требования</h2>
+      <h3 style="margin: 0;">В России:</h3>
+      <ol>
+        <li>ФЗ № 419-ФЗ</li>
+        <li>ФЗ № 8-ФЗ</li>
+        <li>Приказ Министерства связи и массовых коммуникаций России № 483</li>
+        <li>ГОСТ Р 52872–2012. Интернет-ресурсы. Требования доступности для инвалидов по зрению</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>WCAG</h2>
+      <p>Все эти законы используют требования из Руководства по обеспечению доступности веб-контента (Web Guidelines Access Content)</p>
+      <p><a href="https://www.w3.org/TR/WCAG20/" target="_blank">WCAG 2.0</a></p>
+      <p><a href="https://www.w3.org/TR/WCAG22/" target="_blank">WCAG 2.2</a></p>
+    </section>
+
+    <section class="slide">
+      <h2>Законодательные требования</h2>
+      <div class="columns two">
+        <p>Законы о доступности требуют минимум уровня <b>AA</b> по WCAG</p>
+        <figure>
+          <img src="img/cite-build.jpg" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        <cite class="small"><a href="http://www.freepik.com" target="_blank">Designed by Blossomstar / Freepik</a></cite>
+        </figure>
+      </div>
+    </section>
+    <section class="slide">
+      <h2>Законодательные требования</h2>
+      <div class="columns two">
+        <ul>
+          <li>Сбор персональных данных</li>
+        </ul>
+        <figure>
+          <img src="img/cite-build.jpg" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        <cite class="small"><a href="http://www.freepik.com" target="_blank">Designed by Blossomstar / Freepik</a></cite>
+        </figure>
+      </div>
+    </section>
+    <section class="slide">
+      <h2>Законодательные требования</h2>
+      <div class="columns two">
+        <ul>
+          <li>Сбор персональных данных</li>
+          <li>Оферта</li>
+        </ul>
+        <figure>
+          <img src="img/cite-build.jpg" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        <cite class="small"><a href="http://www.freepik.com" target="_blank">Designed by Blossomstar / Freepik</a></cite>
+        </figure>
+      </div>
+    </section>
+    <section class="slide">
+      <h2>Законодательные требования</h2>
+      <div class="columns two">
+        <ul>
+          <li>Сбор персональных данных</li>
+          <li>Оферта</li>
+          <li>Сайт с алкогольной продукцией</li>
+        </ul>
+        <figure>
+          <img src="img/cite-build.jpg" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        <cite class="small"><a href="http://www.freepik.com" target="_blank">Designed by Blossomstar / Freepik</a></cite>
+        </figure>
+      </div>
+    </section>
+    <section class="slide">
+      <h2>Законодательные требования</h2>
+      <div class="columns two">
+        <ul>
+          <li>Сбор персональных данных</li>
+          <li>Оферта</li>
+          <li>Сайт с алкогольной продукцией</li>
+          <li>Сайт застройщика или коммунальщика</li>
+        </ul>
+        <figure>
+          <img src="img/cite-build.jpg" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        <cite class="small"><a href="http://www.freepik.com" target="_blank">Designed by Blossomstar / Freepik</a></cite>
+        </figure>
+      </div>
+    </section>
+    <section class="slide">
+      <h2>Законодательные требования</h2>
+      <div class="columns two">
+        <ul>
+          <li>Сбор персональных данных</li>
+          <li>Оферта</li>
+          <li>Сайт с алкогольной продукцией</li>
+          <li>Сайт застройщика или коммунальщика</li>
+          <li>Сайт медицинской организации</li>
+        </ul>
+        <figure>
+          <img src="img/cite-build.jpg" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        <cite class="small"><a href="http://www.freepik.com" target="_blank">Designed by Blossomstar / Freepik</a></cite>
+        </figure>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Где задавать вопросы</h2>
+      <div class="columns two">
+        <ol>
+          <li>Stackoverflow.com</li>
+          <li>GitHub issue</li>
+          <li>Telegram</li>
+        </ol>
+        <figure>
+          <img src="img/question.png" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        </figure>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Где читать новости</h2>
+      <div class="columns two">
+        <ol>
+          <li>Хабр</li>
+          <li>X</li>
+          <li>Mastodone</li>
+          <li>Smashing Magazine</li>
+          <li>technology preview Apple/Google Chrome</li>
+        </ol>
+        <figure>
+          <img src="img/question.png" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        </figure>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Ежегодные опросники по технологиям</h2>
+      <div class="columns two">
+        <ol>
+          <li><a href="https://stateofcss.com/en-US" target="_blank">state of css</a></li>
+          <li><a href="https://stateofjs.com/en-US" target="_blank">state of js</a></li>
+          <li><a href="https://stateofhtml.com/en-US" target="_blank">state of html</a></li>
+          <li>и другие</li>
+        </ol>
+        <figure>
+          <img src="img/question.png" width="100%" height="100%" alt="" style="
+          max-height: 370px;
+          margin: 0 auto;
+          display: flex;
+          object-fit: contain;
+        ">
+        </figure>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Interop</h2>
+      <p><blockquote>Microsoft, Apple, Google, Mozilla и другие компании запустили проект Interop. Это инициатива по улучшению браузеров и обеспечению единообразного взаимодействия пользователей со всеми платформами. Участники хотят добиться того, чтобы любая технология во всех браузерах работала одинаково</blockquote></p>
+      <ol>
+        <li><a href="https://wpt.fyi/interop-2023" target="_blank">Interop 2023</a></li>
+        <li><a href="https://wpt.fyi/interop-2024?stable" target="_blank">Interop 2024</a></li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Тенденции развития Интернета и веб-технологий</h2>
+      <ol>
+        <li>интеграция метавселенной</li>
+        <li>мультиопыт</li>
+        <li>кибербезопасность</li>
+        <li>Motion UI</li>
+        <li>голосовой поиск</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Российский сектор ИКТ</h2>
+      <blockquote>Объем реализации товаров, работ, услуг сектора ИКТ за I кв. 2024 г. составил порядка 1,7 трлн руб., существенно превысив значение за I кв. 2023 г. (+32,6%)</blockquote>
+      <cite><a href="https://issek.hse.ru/news/945764672.html" target="_blank">ИСИЭЗ</a></cite>
+    </section>
+
+    <section class="slide">
+      <h2>Российский сектор ИКТ</h2>
+      <blockquote>Инвестиции в сектор ИКТ в I кв. 2024 г. составили 274,6 млрд руб., увеличившись в 1,8 раза относительно того же периода 2023 г. </blockquote>
+      <cite><a href="https://issek.hse.ru/news/945764672.html" target="_blank">ИСИЭЗ</a></cite>
+    </section>
+
+    <section class="slide">
+      <h2>Российский сектор ИКТ</h2>
+      <blockquote>Среднесписочная численность работников сектора ИКТ в I кв. 2024 г. достигла максимального за последние годы значения — 1,5 млн человек (на 117,7 тыс. человек, или 8,5%, больше относительно I кв. 2023 г.)</blockquote>
+      <cite><a href="https://issek.hse.ru/news/945764672.html" target="_blank">ИСИЭЗ</a></cite>
+    </section>
+
+    <section class="slide">
+      <h2>Тренды мировой научно-технической политики: итоги 2023 года</h2>
+      <ol>
+        <li>поддержка научных исследований и разработок </li>
+        <li>устойчивое развитие и противодействие изменению климата</li>
+        <li>технологический суверенитет и конкуренция за лидерство в области ИИ и других цифровых технологий</li>
+        <li>укрепление кадрового потенциала</li>
+      </ol>
+      <cite><a href="https://issek.hse.ru/news/902811658.html" target="_blank">ИСЭЗ НИУ ВШЭ </a></cite>
+    </section>
+
+    <section class="slide">
+      <h2>Материалы и ссылки ч.1/3</h2>
+      <ol>
+        <li><a href="https://htmlacademy.ru/blog/html/specification" target="_blank">Про спецификации</a></li>
+        <li><a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/How_the_Web_works"
+            target="_blank">Как работает Веб</a></li>
+        <li><a href="https://html.spec.whatwg.org/multipage/" target="_blank">HTML Living Standard</a></li>
+        <li><a href="Все спецификации по CSS" target="_blank">https://www.w3.org/TR/?tag=css</a></li>
+        <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/"
+            target="_blank">ECMA-262</a></li>
+        <li><a href="https://workspace.ru/blog/trendy-i-napravleniya-razvitiya-veb-razrabotki/" target="_blank">Тренды в
+            Вебе 2024</a></li>
+        <li><a href="https://adn.agency/blog/article/yuridicheskie_trebovaniya_k_saytam" target="_blank">Законодательные
+            требования, примирительные к веб-ресурсам (сайтам)</a></li>
+      </ol>
+    </section>
+    <section class="slide">
+      <h2>Материалы и ссылки ч.2/3</h2>
+      <ol>
+        <li><a href="https://web-standards.ru/articles/a11y-and-law/" target="_blank">Доступность</a></li>
+        <li><a href="https://stateofcss.com/en-US" target="_blank">state of css</a></li>
+        <li><a href="https://stateofjs.com/en-US" target="_blank">state of js</a></li>
+        <li><a href="https://stateofhtml.com/en-US" target="_blank">state of html</a></li>
+        <li><a href="https://wpt.fyi/interop-2023" target="_blank">Interop 2023</a></li>
+        <li><a href="https://wpt.fyi/interop-2024?stable" target="_blank">Interop 2024</a></li>
+        <li><a href="https://doka.guide/a11y/chto-takoe-a11y/" target="_blank">О доступности</a></li>
+      </ol>
+    </section>
+    <section class="slide">
+      <h2>Материалы и ссылки ч.3/3</h2>
+      <ol>
+        <li><a href="https://www.youtube.com/watch?v=gmfedv5oWiQ&ab_channel=FrontendChannel" target="_blank">А доки где?
+            / Вадим Макеев (видео)</a></li>
+        <li><a
+            href="https://vc.ru/dev/995525-testirovanie-rubrika-vopros-otvet-kakie-dvizhki-ispolzuyutsya-v-brauzerah-i-kak-eto-mozhet-prigoditsya-v-rabote-qa"
+            target="_blank">Про браузерные движки</a></li>
+      </ol>
+    </section>
+
+    <section class="slide clear">
+      <div class="columns two">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <h2>Слайды</h2>
+          <img src="img/slides.png" width="200" height="200" alt="Ссылка на Слайды">
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <h2>Яндекс Диск</h2>
+          <img src="img/disk.png" width="200" height="200" alt="Ссылка на Яндекс Диск">
+        </div>
+      </div>
+    </section>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.js"></script>
+    <!-- Copyright © 2024 Yours Truly, Famous Inc. -->
+
+  </body>
+
+</html>
